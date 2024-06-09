@@ -972,7 +972,7 @@ rm -rf klkf.txt
 - pythonanywhere deki bash terminale;
 
 ```bash
-git clone https://github.com/Umit8098/Project_Django_Rest_Framework_Flight_App.git
+git clone https://github.com/Umit8098/Project_Django_Rest_Framework_Rent_A_Car_App_CH-12.git
 ```
 
 - project imizi pythonanywhere clonladık.
@@ -1011,9 +1011,9 @@ git clone https://github.com/Umit8098/Project_Django_Rest_Framework_Flight_App.g
 
 
 - Source code: -> bash terminalde app in olduğu klasör içerisinde iken, "pwd" yazıp klasörün yolunu görebiliyoruz.
-        /home/umit8103/Project_Django_Rest_Framework_Stock_App_CH-13
+        /home/umit8104/Project_Django_Rest_Framework_Rent_A_Car_App_CH-12
 - Working directory: -> Source code kısmına yazdığımız yolu buraya da yazıyoruz.
-        /home/umit8103/Project_Django_Rest_Framework_Stock_App_CH-13
+        /home/umit8104/Project_Django_Rest_Framework_Rent_A_Car_App_CH-12
 - WSGI configuration file: Manuel configuration yaptığımız için bu WSGY (Web Server Gateway Interface) configuration u da kendimiz yapacağız. django application ile server arasındaki iletişimi sağlayan gateway. Bunda ayarlar yapmalıyız. sağ tıklayıp new tab ile yeni pencerede açıyoruz, Default olarak farmeworklerin ayar template leri var. 74-89 satırları arasında django kısmı var. Bunun haricindeki herşeyi siliyoruz, sadece django ile ilgili kısım kalıyor. İlk iki satır hariç yorumdan kurtarıyoruz.
 
 ```py
@@ -1039,13 +1039,13 @@ application = get_wsgi_application()
 - path kısmında bize manage.py ın yolunu vermemizi istiyor. Aslında source code umuzun olduğu path, biraz önce "pwd" ile almıştık, "/home/umit8103/Project_Django_Rest_Framework_Stock_App_CH-13". Bunu path değişkenine tanımlıyoruz. Yani manage.py ımız bu klasörün içinde bunu söylüyoruz.
 
 ```py
-path = '/home/umit8103/Project_Django_Rest_Framework_Stock_App_CH-13'
+path = '/home/umit8104/Project_Django_Rest_Framework_Rent_A_Car_App_CH-12'
 ```
 
 - os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'  -> settings klasörümüzün bulunduğu yeri belirtiyoruz. Bizim settings klasörümüz core in altında. buraya 'core.settings' yazıyoruz.
 
 ```py
-os.environ['DJANGO_SETTINGS_MODULE'] = 'core.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'main.settings'
 ```
 
 
@@ -1058,7 +1058,7 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'core.settings'
   - kopyaladığımız path i Virtualenv kısmındaki bölüme yazıp tik e tıklıyoruz. env miz de hazır.
 
 ```py
-/home/umit8103/Project_Django_Rest_Framework_Stock_App_CH-13/env
+/home/umit8104/Project_Django_Rest_Framework_Rent_A_Car_App_CH-12/env
 ```
 
 
@@ -1129,7 +1129,7 @@ python manage.py createsuperuser
 - admin panele giriyoruz,
 - statics ler olmadan, css ler olmadan sayfamız geldi. 
 - statics lerin görünmemesinin sebebi; django admin panel bir application ve bunun static file ları env içerisinde duruyor. Bunu localhost ta çalıştırdığımız zaman sıkıntı yaşamıyoruz ama canlı servera aldığımız zaman static root diye bir directory belirtmemiz gerekiyor. Static root, bütün environment ta olan static file ları veya application içerisinde varsa static file larımızı (css, javascript, image)  bunların hepsini tek bir klasör altında topluyor ve canlıdayken oradan çekiyor. Bu static ayarı nı yapmamız gerekiyor. Nasıl yapacağız;
-- dashboadr -> Cource code -> Go to directory -> core -> settings -> base.py  içine STATİC_URL = 'static' altına STATIC_ROOT = BASE_DIR / 'static' yazıyoruz.
+- dashboard -> Source code -> Go to directory -> main -> settings -> base.py  içine STATİC_URL = 'static' altına STATIC_ROOT = BASE_DIR / 'static' yazıyoruz.
 
 settings/base.py
 ```py
@@ -1143,7 +1143,7 @@ STATIC_ROOT = BASE_DIR / 'static'
 python manage.py collectstatic
 ```
 - bu komut çalıştırıldıktan sonra; 197 adet static file kopyalandı ve belirttiğimiz folder altında toplandı.
-" 197 static files copied to '/home/umit8098/Project_Django_Rest_Framework_Stock_App/core/static'. "
+" 162 static files copied to '/home/umit8104/Project_Django_Rest_Framework_Rent_A_Car_App_CH-12/static'. "
 
 - Şimdi dashboarda gidip, web kısmında Static files: kısmında URL altında URL ini (/static/),  ve Directory altında path ini giriyoruz. (path ini zaten bize vermişti -> 197 static files cop..... kısmının sonunda. (/home/umit8098/Project_Django_Rest_Framework_Stock_App/core/static))
 - girdikten sonra ✔ işareti ile kaydetmeliyiz.
