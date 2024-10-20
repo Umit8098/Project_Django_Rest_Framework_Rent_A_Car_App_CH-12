@@ -995,7 +995,7 @@ git clone https://github.com/Umit8098/Project_Django_Rest_Framework_Rent_A_Car_A
 - pip install -r requirements.txt
 ```
 
-  - pythonanywhere -> dashboard -> Web -> Add a new web app -> next -> Manual configuration (including virtualenvs) -> Python 3.10 (python versionu) -> next
+  - pythonanywhere -> dashboard -> Web -> Add a new web app -> next -> Manual configuration (including virtualenvs) -> Python 3.10 (kurulu python versionu) -> next
         All done! Your web app is now set up. Details below. 
         (Hepsi tamam! Web uygulamanız artık kuruldu. Detaylar aşağıda.)
   - Artık app kuruldu ve app ile ilgili bir dashboard sundu bize. Burada manuel configurations lar yapacağız. 
