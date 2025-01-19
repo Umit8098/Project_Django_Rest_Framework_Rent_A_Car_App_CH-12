@@ -31,21 +31,16 @@
 <!-- OVERVIEW -->
 
 ## Overview
+
+- Rent_A_Car_App Test On Postman
+![screenshot](project_screenshot/Rent_A_Car_App_Test_Postman.gif)
+
+---
+
 - Rent_A_Car_App User/Auth Test On Postman
 ![screenshot](project_screenshot/Rent_A_Car_User_Auth_Test_Postman.gif)
 
 ---
-
-![screenshot](project_screenshot/quiz_app_quiz.gif)
-
----
-
-![screenshot](project_screenshot/quiz_app_user.gif)
-
----
-
-![screenshot](project_screenshot/quiz_app_shema.jpg)
-
 
 ## Built With
 
