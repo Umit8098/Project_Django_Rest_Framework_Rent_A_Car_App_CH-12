@@ -98,10 +98,30 @@ SECRET_KEY =123456789abcdefg...
 
 ## About This Project
 - Rent A Car Application API service.
+- Customers:
+  - Can specify a date range and list available vehicles. Past dates are not listed.
+  - A vehicle can be reserved within the selected date range, but a second vehicle cannot be rented within the same date range.
+  - A reserved vehicle cannot be reserved on those dates.
+  - Can list reservations.
+  - Can delete reservations.
+- Managers:
+  - Car table CRUD operations
+  - Customer (User) table CRUD operations
+  - Reservation table CRUD operations
 
 <hr>
 
 - Rent A Car Application API service.
+- Müşteriler:
+  - Tarih aralığı belirtip müsait araç listeleyebilir. Geçmiş tarihler listelenmez.
+  - Seçilen tarih aralığında araç rezerve edilebilir, ancak aynı tarih aralığında ikinci bir araç kiralayamaz.
+  - Rezerve edilmiş bir aracı, o tarihlerde rezerve edemez.
+  - Rezervasyonlarını listeyebilir.
+  - Rezervasyonlarını silebilir.
+- Yöneticiler:
+  - Araba tablosu CRUD işlemleri
+  - Müşteri (Kullanıcı) tablosu CRUD işlemleri
+  - Reservasyon tablosu CRUD işlemleri
 
 ## Acknowledgements
 - [Django Rest Framework](https://www.django-rest-framework.org/)
