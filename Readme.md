@@ -31,8 +31,8 @@
 <!-- OVERVIEW -->
 
 ## Overview
-
-![screenshot](project_screenshot/quiz_app.gif)
+- Rent_A_Car_App User/Auth Test On Postman
+![screenshot](project_screenshot/Rent_A_Car_User_Auth_Test_Postman.gif)
 
 ---
 
@@ -125,6 +125,7 @@ SECRET_KEY =123456789abcdefg...
 
 ## Acknowledgements
 - [Django Rest Framework](https://www.django-rest-framework.org/)
+- [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/)
 - [django-filter](https://django-filter.readthedocs.io/en/stable/)
 
 
