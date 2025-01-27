@@ -2,8 +2,10 @@
 
 <h1 align="center">Project_Django_Rest_Framework_Rent_A_Car_App</h1>
 
+<p align="center">🚗 Müşterilerin araç kiralamasını ve yöneticilerin araç envanterini yönetmesini sağlayan bir API uygulaması 🚗</p>
 
-<div align="center">
+
+<!-- <div align="center">
   <h3>
     <a href="http://umit8104.pythonanywhere.com/">
       Demo
@@ -14,7 +16,7 @@
     </a>
  
   </h3>
-</div>
+</div> -->
 
 <!-- TABLE OF CONTENTS -->
 
@@ -27,6 +29,7 @@
 - [API Testing](#api-testing)
 - [Overview](#overview)
   - [Kullanıcı Doğrulama Testi](#kullanıcı-doğrulama-testi)
+- [➡ *Postman ile kullanıcı doğrulama işlemleri için yapılan test sürecini görebilirsiniz.*](#-postman-ile-kullanıcı-doğrulama-işlemleri-için-yapılan-test-sürecini-görebilirsiniz)
   - [Rent\_A\_Car\_App CRUD Testi](#rent_a_car_app-crud-testi)
 - [Built With](#built-with)
 - [How To Use](#how-to-use)
@@ -53,11 +56,11 @@ Bu API aşağıdaki endpoint'leri sağlar:
 
 | Method | URL                                                     | Açıklama                         |
 |--------|---------------------------------------------------------|----------------------------------|
-| GET    | `https://umit8104.pythonanywhere.com/api/car/`          | Tüm arabaları listele            |
-| POST   | `https://umit8104.pythonanywhere.com/api/reservation/`  | Yeni bir kiralama oluştur        |
-| GET    | `https://umit8104.pythonanywhere.com/api/reservation/1` | Belirli bir kiralamanın detayları|
-| PUT    | `https://umit8104.pythonanywhere.com/api/reservation/1` | Kiralama güncelleme              |
-| DELETE | `https://umit8104.pythonanywhere.com/api/reservation/1` | Kiralama silme                   |
+| GET    | `https://umit8104.pythonanywhere.com/api/car/`          | Tüm araçları listele             |
+| POST   | `https://umit8104.pythonanywhere.com/api/reservation/`  | Yeni rezervasyon oluştur         |
+| GET    | `https://umit8104.pythonanywhere.com/api/reservation/1` | Belirli bir rezervasyon detayları|
+| PUT    | `https://umit8104.pythonanywhere.com/api/reservation/1` | Rezervasyonu güncelle            |
+| DELETE | `https://umit8104.pythonanywhere.com/api/reservation/1` | Rezervasyonu sil                 |
 
 
 ## API Testing
@@ -76,24 +79,33 @@ API'leri Postman üzerinden test etmek için aşağıdaki adımları izleyebilir
 
 ## Overview
 
+Rent A Car API uygulaması, araç kiralama süreçlerini kolaylaştırmayı hedefleyen bir sistemdir. Uygulamanın özellikleri:
+- Müşteriler:
+  - Belirli tarih aralıklarında uygun araçları listeleyebilir ve rezerve edebilir.
+  - Rezervasyonlarını görüntüleyebilir veya iptal edebilir.
+  - Aynı tarih aralığında birden fazla araç kiralayamaz.
+- Yöneticiler:
+  - Araç, müşteri ve rezervasyon tabloları için CRUD işlemleri yapabilir.
+- Geçmiş tarihler listelenmez ve rezerve edilen araçlar tekrar rezerve edilemez.
+
 ### Kullanıcı Doğrulama Testi
 <!-- ![screenshot](project_screenshot/Rent_A_Car_User_Auth_Test_Postman.gif) -->
 <img src="project_screenshot/Rent_A_Car_User_Auth_Test_Postman.gif" alt="Kullanıcı Doğrulama Testi" width="400"/>
-
+➡ *Postman ile kullanıcı doğrulama işlemleri için yapılan test sürecini görebilirsiniz.*
 ---
 
 ### Rent_A_Car_App CRUD Testi
 <!-- ![screenshot](project_screenshot/Rent_A_Car_App_Test_Postman.gif) -->
 <img src="project_screenshot/Rent_A_Car_App_Test_Postman.gif" alt="Rent_A_Car_App CRUD Testi" width="400"/>
-
+➡ *Araç kiralama API'si üzerindeki CRUD işlemlerini Postman ile test etme.*
 
 
 ## Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 Bu proje aşağıdaki araçlar ve kütüphanelerle inşa edilmiştir:
-- [Django Rest Framework](https://www.django-rest-framework.org/) - Güçlü bir REST API framework'ü.
-- [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/) - Kullanıcı yetkilendirme modülü.
+- [Django Rest Framework](https://www.django-rest-framework.org/) - REST API geliştirmek için kullanılan güçlü bir framework.
+- [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/) - Kullanıcı doğrulama ve yetkilendirme modülü.
 - [django-filter](https://django-filter.readthedocs.io/en/stable/): Gelişmiş filtreleme özellikleri için kullanılan bir kütüphane.
 
 
@@ -139,6 +151,8 @@ SECRET_KEY =123456789abcdefg...
     $ python manage.py runserver
 ```
 
+- Uygulamayı klonladıktan ve bağımlılıkları yükledikten sonra şu adımları izleyebilirsiniz:
+
 ### Örnek Kullanım
 
 1. **Login Request:**
@@ -173,7 +187,8 @@ SECRET_KEY =123456789abcdefg...
 ```
 
 ## About This Project
-- Rent A Car Application API service.
+
+- It is an API application developed to digitize and optimize car rental processes. It offers special capabilities to both customers and managers:
 - Customers:
   - Can specify a date range and list available vehicles. Past dates are not listed.
   - A vehicle can be reserved within the selected date range, but a second vehicle cannot be rented within the same date range.
@@ -187,7 +202,7 @@ SECRET_KEY =123456789abcdefg...
 
 <hr>
 
-- Rent A Car Application API service.
+- Araç kiralama süreçlerini dijitalleştirmek ve optimize etmek amacıyla geliştirilmiş bir API uygulamasıdır. Hem müşterilere hem de yöneticilere özel yetenekler sunar:
 - Müşteriler:
   - Tarih aralığı belirtip müsait araç listeleyebilir. Geçmiş tarihler listelenmez.
   - Seçilen tarih aralığında araç rezerve edilebilir, ancak aynı tarih aralığında ikinci bir araç kiralayamaz.
@@ -198,6 +213,7 @@ SECRET_KEY =123456789abcdefg...
   - Araba tablosu CRUD işlemleri
   - Müşteri (Kullanıcı) tablosu CRUD işlemleri
   - Reservasyon tablosu CRUD işlemleri
+
 
 ## Acknowledgements
 - [Django Rest Framework](https://www.django-rest-framework.org/) - REST API oluşturmak için kullanılan framework.
