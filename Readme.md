@@ -21,32 +21,80 @@
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [API Endpoints](#api-endpoints)
+  - [User/Authentication Endpoints:](#userauthentication-endpoints)
+  - [API/CAR Endpoints:](#apicar-endpoints)
+- [API Testing](#api-testing)
 - [Overview](#overview)
+  - [Kullanıcı Doğrulama Testi](#kullanıcı-doğrulama-testi)
+  - [Rent\_A\_Car\_App CRUD Testi](#rent_a_car_app-crud-testi)
 - [Built With](#built-with)
 - [How To Use](#how-to-use)
+  - [Örnek Kullanım](#örnek-kullanım)
 - [About This Project](#about-this-project)
 - [Acknowledgements](#acknowledgements)
 - [Contact](#contact)
 
-<!-- OVERVIEW -->
+
+## API Endpoints
+
+Bu API aşağıdaki endpoint'leri sağlar:
+
+### User/Authentication Endpoints:
+
+| Method | URL                                                          | Açıklama            |
+|--------|--------------------------------------------------------------|---------------------|
+| POST   | `https://umit8104.pythonanywhere.com/users/register/`        | Yeni kullanıcı kaydı|
+| POST   | `https://umit8104.pythonanywhere.com/users/auth/login/`      | Kullanıcı girişi    |
+| POST   | `https://umit8104.pythonanywhere.com/users/auth/logout/`     | Kullanıcı çıkışı    |
+
+
+### API/CAR Endpoints:
+
+| Method | URL                                                     | Açıklama                         |
+|--------|---------------------------------------------------------|----------------------------------|
+| GET    | `https://umit8104.pythonanywhere.com/api/car/`          | Tüm arabaları listele            |
+| POST   | `https://umit8104.pythonanywhere.com/api/reservation/`  | Yeni bir kiralama oluştur        |
+| GET    | `https://umit8104.pythonanywhere.com/api/reservation/1` | Belirli bir kiralamanın detayları|
+| PUT    | `https://umit8104.pythonanywhere.com/api/reservation/1` | Kiralama güncelleme              |
+| DELETE | `https://umit8104.pythonanywhere.com/api/reservation/1` | Kiralama silme                   |
+
+
+## API Testing
+
+Postman Collection, API'nizin her bir endpoint'ini test etmek için gerekli istekleri içerir. API'nin işlevselliğini hızlı bir şekilde anlamak için kullanabilirsiniz.
+
+API'leri Postman üzerinden test etmek için aşağıdaki adımları izleyebilirsiniz:
+
+1. Postman'i yükleyin (eğer yüklü değilse): [Postman İndir](https://www.postman.com/downloads/).
+2. Bu [Postman Collection](https://umit-dev.postman.co/workspace/Team-Workspace~7e9925db-bf34-4ab9-802e-6deb333b7a46/collection/17531143-7e6a0325-086d-4ed1-bd4d-d46131a26b88?action=share&creator=17531143) indirin ve içe aktarın.
+3. API'leri Postman üzerinden test etmeye başlayın.
+
+**Postman Collection Linki:**  
+[Blog App API Postman Collection](https://umit-dev.postman.co/workspace/Team-Workspace~7e9925db-bf34-4ab9-802e-6deb333b7a46/collection/17531143-7e6a0325-086d-4ed1-bd4d-d46131a26b88?action=share&creator=17531143)
+
 
 ## Overview
 
-- Rent_A_Car_App Test On Postman
-![screenshot](project_screenshot/Rent_A_Car_App_Test_Postman.gif)
+### Kullanıcı Doğrulama Testi
+<!-- ![screenshot](project_screenshot/Rent_A_Car_User_Auth_Test_Postman.gif) -->
+<img src="project_screenshot/Rent_A_Car_User_Auth_Test_Postman.gif" alt="Kullanıcı Doğrulama Testi" width="400"/>
 
 ---
 
-- Rent_A_Car_App User/Auth Test On Postman
-![screenshot](project_screenshot/Rent_A_Car_User_Auth_Test_Postman.gif)
+### Rent_A_Car_App CRUD Testi
+<!-- ![screenshot](project_screenshot/Rent_A_Car_App_Test_Postman.gif) -->
+<img src="project_screenshot/Rent_A_Car_App_Test_Postman.gif" alt="Rent_A_Car_App CRUD Testi" width="400"/>
 
----
+
 
 ## Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
-
-- Djago Rest Framework
+Bu proje aşağıdaki araçlar ve kütüphanelerle inşa edilmiştir:
+- [Django Rest Framework](https://www.django-rest-framework.org/) - Güçlü bir REST API framework'ü.
+- [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/) - Kullanıcı yetkilendirme modülü.
+- [django-filter](https://django-filter.readthedocs.io/en/stable/): Gelişmiş filtreleme özellikleri için kullanılan bir kütüphane.
 
 
 ## How To Use
@@ -91,6 +139,39 @@ SECRET_KEY =123456789abcdefg...
     $ python manage.py runserver
 ```
 
+### Örnek Kullanım
+
+1. **Login Request:**
+   - URL: `https://umit8104.pythonanywhere.com/users/auth/login/`
+   - Method: `POST`
+   - Body (JSON):
+```json
+  {
+    "email": "mary@gmail.com",
+    "password": "mary123456"
+  }
+```
+
+1. **Kiralama Oluşturma:**
+   - URL: `https://umit8104.pythonanywhere.com/api/reservation/`
+   - Method: `POST`
+   - Headers:
+  
+```text
+  Authorization: Token <login olunduğunda dönen token key>
+```
+- 
+  - Body (JSON):
+
+```json
+  {
+    "customer": 1,
+    "car": 2,
+    "start_date": "2025-05-26",
+    "end_date": "2025-05-28"
+}
+```
+
 ## About This Project
 - Rent A Car Application API service.
 - Customers:
@@ -119,15 +200,15 @@ SECRET_KEY =123456789abcdefg...
   - Reservasyon tablosu CRUD işlemleri
 
 ## Acknowledgements
-- [Django Rest Framework](https://www.django-rest-framework.org/)
-- [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/)
-- [django-filter](https://django-filter.readthedocs.io/en/stable/)
+- [Django Rest Framework](https://www.django-rest-framework.org/) - REST API oluşturmak için kullanılan framework.
+- [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/) - Kullanıcı doğrulama için kullanıldı.
+- [django-filter](https://django-filter.readthedocs.io/en/stable/): Gelişmiş filtreleme özellikleri için kullanıldı.
 
 
 ## Contact
 
 <!-- - Website [your-website.com](https://{your-web-site-link}) -->
-- GitHub [@Umit8098](https://github.com/Umit8098)
+- **GitHub** [@Umit8098](https://github.com/Umit8098)
 
-- Linkedin [@umit-arat](https://linkedin.com/in/umit-arat/)
+- **LinkedIn** [@umit-arat](https://linkedin.com/in/umit-arat/)
 <!-- - Twitter [@your-twitter](https://{twitter.com/your-username}) -->
