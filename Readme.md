@@ -29,7 +29,6 @@
 - [API Testing](#api-testing)
 - [Overview](#overview)
   - [Kullanıcı Doğrulama Testi](#kullanıcı-doğrulama-testi)
-- [➡ *Postman ile kullanıcı doğrulama işlemleri için yapılan test sürecini görebilirsiniz.*](#-postman-ile-kullanıcı-doğrulama-işlemleri-için-yapılan-test-sürecini-görebilirsiniz)
   - [Rent\_A\_Car\_App CRUD Testi](#rent_a_car_app-crud-testi)
 - [Built With](#built-with)
 - [How To Use](#how-to-use)
@@ -92,6 +91,7 @@ Rent A Car API uygulaması, araç kiralama süreçlerini kolaylaştırmayı hede
 <!-- ![screenshot](project_screenshot/Rent_A_Car_User_Auth_Test_Postman.gif) -->
 <img src="project_screenshot/Rent_A_Car_User_Auth_Test_Postman.gif" alt="Kullanıcı Doğrulama Testi" width="400"/>
 ➡ *Postman ile kullanıcı doğrulama işlemleri için yapılan test sürecini görebilirsiniz.*
+
 ---
 
 ### Rent_A_Car_App CRUD Testi
