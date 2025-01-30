@@ -29,7 +29,7 @@
 - [API Testing](#api-testing)
 - [Overview](#overview)
   - [User Authentication Test](#user-authentication-test)
-  - [Rent\_A\_Car\_App CRUD Testi](#rent_a_car_app-crud-testi)
+  - [Rent\_A\_Car\_App CRUD Test](#rent_a_car_app-crud-test)
 - [Built With](#built-with)
 - [How To Use](#how-to-use)
   - [Example Usage](#example-usage)
@@ -68,7 +68,7 @@ Postman Collection contains the necessary requests to test each endpoint of your
 
 To test APIs via Postman, you can follow the steps below:
 
-1. Install Postman (if not installed): [Postman İndir](https://www.postman.com/downloads/).
+1. Install Postman (if not installed): [Download Postman](https://www.postman.com/downloads/).
 2. This [Postman Collection](https://umit-dev.postman.co/workspace/Team-Workspace~7e9925db-bf34-4ab9-802e-6deb333b7a46/collection/17531143-7e6a0325-086d-4ed1-bd4d-d46131a26b88?action=share&creator=17531143) download and import.
 3. Start testing APIs via Postman.
 
@@ -106,7 +106,7 @@ Rent A Car API uygulaması, araç kiralama süreçlerini kolaylaştırmayı hede
 
 ---
 
-### Rent_A_Car_App CRUD Testi
+### Rent_A_Car_App CRUD Test
 <!-- ![screenshot](project_screenshot/Rent_A_Car_App_Test_Postman.gif) -->
 <img src="project_screenshot/Rent_A_Car_App_Test_Postman.gif" alt="Rent_A_Car_App CRUD Testi" width="400"/>
 
@@ -165,7 +165,7 @@ SECRET_KEY =123456789abcdefg...
     $ python manage.py runserver
 ```
 
-- Uygulamayı klonladıktan ve bağımlılıkları yükledikten sonra şu adımları izleyebilirsiniz:
+- After cloning the app and installing the dependencies, you can follow these steps:
 
 ### Example Usage
 
