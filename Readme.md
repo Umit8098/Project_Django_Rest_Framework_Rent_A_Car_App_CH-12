@@ -2,7 +2,7 @@
 
 <h1 align="center">Project_Django_Rest_Framework_Rent_A_Car_App</h1>
 
-<p align="center">🚗 Müşterilerin araç kiralamasını ve yöneticilerin araç envanterini yönetmesini sağlayan bir API uygulaması 🚗</p>
+<p align="center"><strong>🚗 Müşterilerin araç kiralamasını ve yöneticilerin araç envanterini yönetmesini sağlayan bir API uygulaması 🚗</strong></p>
 
 
 <!-- <div align="center">
@@ -28,55 +28,66 @@
   - [API/CAR Endpoints:](#apicar-endpoints)
 - [API Testing](#api-testing)
 - [Overview](#overview)
-  - [Kullanıcı Doğrulama Testi](#kullanıcı-doğrulama-testi)
+  - [User Authentication Test](#user-authentication-test)
   - [Rent\_A\_Car\_App CRUD Testi](#rent_a_car_app-crud-testi)
 - [Built With](#built-with)
 - [How To Use](#how-to-use)
-  - [Örnek Kullanım](#örnek-kullanım)
+  - [Example Usage](#example-usage)
 - [About This Project](#about-this-project)
-- [Acknowledgements](#acknowledgements)
+- [Key Features](#key-features)
 - [Contact](#contact)
 
 
 ## API Endpoints
 
-Bu API aşağıdaki endpoint'leri sağlar:
+This API provides the following endpoints:
 
 ### User/Authentication Endpoints:
 
-| Method | URL                                                          | Açıklama            |
-|--------|--------------------------------------------------------------|---------------------|
-| POST   | `https://umit8104.pythonanywhere.com/users/register/`        | Yeni kullanıcı kaydı|
-| POST   | `https://umit8104.pythonanywhere.com/users/auth/login/`      | Kullanıcı girişi    |
-| POST   | `https://umit8104.pythonanywhere.com/users/auth/logout/`     | Kullanıcı çıkışı    |
+| Method | URL                                                          | Explanation           |
+|--------|--------------------------------------------------------------|-----------------------|
+| POST   | `https://umit8104.pythonanywhere.com/users/register/`        | New user registration |
+| POST   | `https://umit8104.pythonanywhere.com/users/auth/login/`      | User login            |
+| POST   | `https://umit8104.pythonanywhere.com/users/auth/logout/`     | User logout           |
 
 
 ### API/CAR Endpoints:
 
-| Method | URL                                                     | Açıklama                         |
-|--------|---------------------------------------------------------|----------------------------------|
-| GET    | `https://umit8104.pythonanywhere.com/api/car/`          | Tüm araçları listele             |
-| POST   | `https://umit8104.pythonanywhere.com/api/reservation/`  | Yeni rezervasyon oluştur         |
-| GET    | `https://umit8104.pythonanywhere.com/api/reservation/1` | Belirli bir rezervasyon detayları|
-| PUT    | `https://umit8104.pythonanywhere.com/api/reservation/1` | Rezervasyonu güncelle            |
-| DELETE | `https://umit8104.pythonanywhere.com/api/reservation/1` | Rezervasyonu sil                 |
+| Method | URL                                                     | Explanation              |
+|--------|---------------------------------------------------------|--------------------------|
+| GET    | `https://umit8104.pythonanywhere.com/api/car/`          | All vehicles list        |
+| POST   | `https://umit8104.pythonanywhere.com/api/reservation/`  | Create new reservation   |
+| GET    | `https://umit8104.pythonanywhere.com/api/reservation/1` | Specific booking details |
+| PUT    | `https://umit8104.pythonanywhere.com/api/reservation/1` | Update reservation       |
+| DELETE | `https://umit8104.pythonanywhere.com/api/reservation/1` | Delete reservation       |
 
 
 ## API Testing
 
-Postman Collection, API'nizin her bir endpoint'ini test etmek için gerekli istekleri içerir. API'nin işlevselliğini hızlı bir şekilde anlamak için kullanabilirsiniz.
+Postman Collection contains the necessary requests to test each endpoint of your API. You can use it to quickly understand the functionality of the API.
 
-API'leri Postman üzerinden test etmek için aşağıdaki adımları izleyebilirsiniz:
+To test APIs via Postman, you can follow the steps below:
 
-1. Postman'i yükleyin (eğer yüklü değilse): [Postman İndir](https://www.postman.com/downloads/).
-2. Bu [Postman Collection](https://umit-dev.postman.co/workspace/Team-Workspace~7e9925db-bf34-4ab9-802e-6deb333b7a46/collection/17531143-7e6a0325-086d-4ed1-bd4d-d46131a26b88?action=share&creator=17531143) indirin ve içe aktarın.
-3. API'leri Postman üzerinden test etmeye başlayın.
+1. Install Postman (if not installed): [Postman İndir](https://www.postman.com/downloads/).
+2. This [Postman Collection](https://umit-dev.postman.co/workspace/Team-Workspace~7e9925db-bf34-4ab9-802e-6deb333b7a46/collection/17531143-7e6a0325-086d-4ed1-bd4d-d46131a26b88?action=share&creator=17531143) download and import.
+3. Start testing APIs via Postman.
 
-**Postman Collection Linki:**  
-[Blog App API Postman Collection](https://umit-dev.postman.co/workspace/Team-Workspace~7e9925db-bf34-4ab9-802e-6deb333b7a46/collection/17531143-7e6a0325-086d-4ed1-bd4d-d46131a26b88?action=share&creator=17531143)
+**Postman Collection Link:**  
+[Rent_A_Car App API Postman Collection](https://umit-dev.postman.co/workspace/Team-Workspace~7e9925db-bf34-4ab9-802e-6deb333b7a46/collection/17531143-7e6a0325-086d-4ed1-bd4d-d46131a26b88?action=share&creator=17531143)
 
 
 ## Overview
+
+Rent A Car API application is a system that aims to facilitate car rental processes. Features of the application:
+- Customers:
+  - Can list and reserve suitable vehicles for certain date ranges.
+  - Can view or cancel their reservations.
+  - Cannot rent more than one vehicle within the same date range.
+- Managers:
+  - The tool can perform CRUD operations for customer and reservation tables.
+- Past dates are not listed and reserved vehicles cannot be booked again.
+
+--- 
 
 Rent A Car API uygulaması, araç kiralama süreçlerini kolaylaştırmayı hedefleyen bir sistemdir. Uygulamanın özellikleri:
 - Müşteriler:
@@ -87,27 +98,30 @@ Rent A Car API uygulaması, araç kiralama süreçlerini kolaylaştırmayı hede
   - Araç, müşteri ve rezervasyon tabloları için CRUD işlemleri yapabilir.
 - Geçmiş tarihler listelenmez ve rezerve edilen araçlar tekrar rezerve edilemez.
 
-### Kullanıcı Doğrulama Testi
+### User Authentication Test
 <!-- ![screenshot](project_screenshot/Rent_A_Car_User_Auth_Test_Postman.gif) -->
-<img src="project_screenshot/Rent_A_Car_User_Auth_Test_Postman.gif" alt="Kullanıcı Doğrulama Testi" width="400"/>
-➡ *Postman ile kullanıcı doğrulama işlemleri için yapılan test sürecini görebilirsiniz.*
+<img src="project_screenshot/Rent_A_Car_User_Auth_Test_Postman.gif" alt="User/Authentication Test" width="400"/>
+
+➡ Testing user authentication processes with Postman.
 
 ---
 
 ### Rent_A_Car_App CRUD Testi
 <!-- ![screenshot](project_screenshot/Rent_A_Car_App_Test_Postman.gif) -->
 <img src="project_screenshot/Rent_A_Car_App_Test_Postman.gif" alt="Rent_A_Car_App CRUD Testi" width="400"/>
-➡ *Araç kiralama API'si üzerindeki CRUD işlemlerini Postman ile test etme.*
 
+➡ Testing CRUD operations on the Rent_A_Car_App API with Postman.
+
+---
 
 ## Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
-Bu proje aşağıdaki araçlar ve kütüphanelerle inşa edilmiştir:
-- [Django Rest Framework](https://www.django-rest-framework.org/) - REST API geliştirmek için kullanılan güçlü bir framework.
-- [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/) - Kullanıcı doğrulama ve yetkilendirme modülü.
-- [django-filter](https://django-filter.readthedocs.io/en/stable/): Gelişmiş filtreleme özellikleri için kullanılan bir kütüphane.
+This project is built with the following tools and libraries:
 
+- [Django Rest Framework](https://www.django-rest-framework.org/) - A powerful framework for developing REST APIs.
+- [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/) - User authentication and authorization.
+- [django-filter](https://django-filter.readthedocs.io/en/stable/) - To facilitate data filtering operations.
 
 ## How To Use
 
@@ -153,7 +167,7 @@ SECRET_KEY =123456789abcdefg...
 
 - Uygulamayı klonladıktan ve bağımlılıkları yükledikten sonra şu adımları izleyebilirsiniz:
 
-### Örnek Kullanım
+### Example Usage
 
 1. **Login Request:**
    - URL: `https://umit8104.pythonanywhere.com/users/auth/login/`
@@ -166,13 +180,13 @@ SECRET_KEY =123456789abcdefg...
   }
 ```
 
-1. **Kiralama Oluşturma:**
+1. **Create Reservation:**
    - URL: `https://umit8104.pythonanywhere.com/api/reservation/`
    - Method: `POST`
    - Headers:
   
 ```text
-  Authorization: Token <login olunduğunda dönen token key>
+  Authorization: Token <token key returned when logged in>
 ```
 - 
   - Body (JSON):
@@ -200,7 +214,7 @@ SECRET_KEY =123456789abcdefg...
   - Customer (User) table CRUD operations
   - Reservation table CRUD operations
 
-<hr>
+---
 
 - Araç kiralama süreçlerini dijitalleştirmek ve optimize etmek amacıyla geliştirilmiş bir API uygulamasıdır. Hem müşterilere hem de yöneticilere özel yetenekler sunar:
 - Müşteriler:
@@ -214,11 +228,23 @@ SECRET_KEY =123456789abcdefg...
   - Müşteri (Kullanıcı) tablosu CRUD işlemleri
   - Reservasyon tablosu CRUD işlemleri
 
+## Key Features
 
-## Acknowledgements
-- [Django Rest Framework](https://www.django-rest-framework.org/) - REST API oluşturmak için kullanılan framework.
-- [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/) - Kullanıcı doğrulama için kullanıldı.
-- [django-filter](https://django-filter.readthedocs.io/en/stable/): Gelişmiş filtreleme özellikleri için kullanıldı.
+- 🚗 **Vehicle Reservation:** Customers can view available vehicles and make reservations within specified date ranges.
+- 🚫 **No Overlapping Reservations:** Customers cannot reserve multiple vehicles during the same time period.
+- 🔄 **Reservation Management:** Customers can view, cancel, and manage their reservations.
+- 🛠️ **Admin CRUD Operations:** Managers can perform CRUD (Create, Read, Update, Delete) operations on vehicles, customers, and reservations.
+- 📅 **Future Reservations Only:** The app prevents reservations for past dates and avoids re-booking reserved vehicles.
+- 🛡️ **User Authentication:** Users must register and authenticate to access vehicle rental features and manage their reservations.
+
+---
+
+- 🚗 **Araç Rezervasyonu:** Müşteriler müsait araçları görüntüleyebilir ve belirlenen tarih aralıklarında rezervasyon yapabilirler.
+- 🚫 **Çakışan Rezervasyon Yok:** Müşteriler aynı zaman diliminde birden fazla araç rezerve edemez.
+- 🔄 **Rezervasyon Yönetimi:** Müşteriler rezervasyonlarını görüntüleyebilir, iptal edebilir ve yönetebilir.
+- 🛠️ **Yönetici CRUD İşlemleri:** Yöneticiler araçlar, müşteriler ve rezervasyonlar üzerinde CRUD (Oluşturma, Okuma, Güncelleme, Silme) işlemlerini gerçekleştirebilir.
+- 📅 **Yalnızca Gelecekteki Rezervasyonlar:** Uygulama, geçmiş tarihler için rezervasyonları önler ve ayrılmış araçların yeniden rezervasyonunu önler.
+- 🛡️ **Kullanıcı Kimlik Doğrulaması:** Araç kiralama özelliklerine erişmek ve rezervasyonlarını yönetmek için kullanıcıların kaydolması ve kimlik doğrulaması yapması gerekir.
 
 
 ## Contact
