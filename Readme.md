@@ -2,7 +2,9 @@
 
 <h1 align="center">Project_Django_Rest_Framework_Rent_A_Car_App</h1>
 
-<p align="center"><strong>🚗 Müşterilerin araç kiralamasını ve yöneticilerin araç envanterini yönetmesini sağlayan bir API uygulaması 🚗</strong></p>
+<p align="center"><strong>🚗 A car rental API application that allows customers to rent vehicles and managers to manage vehicle inventory 🚗</strong></p>
+
+<!-- <p align="center"><strong>🚗 Müşterilerin araç kiralamasını ve yöneticilerin araç envanterini yönetmesini sağlayan bir API uygulaması 🚗</strong></p> -->
 
 
 <!-- <div align="center">
