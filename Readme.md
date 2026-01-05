@@ -3,7 +3,6 @@
   <img src="https://img.shields.io/badge/Django-5.x-092E20?logo=django&logoColor=white" />
   <img src="https://img.shields.io/badge/Django_REST_Framework-API-red?logo=django&logoColor=white" />
   <img src="https://img.shields.io/badge/Auth-Token_Authentication-blue" />
-  <img src="https://img.shields.io/badge/Role-Based_Access-Control-important" />
   <img src="https://img.shields.io/badge/Postman-Tested-orange?logo=postman&logoColor=white" />
 </p>
 
