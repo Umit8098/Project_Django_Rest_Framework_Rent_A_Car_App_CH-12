@@ -1,8 +1,18 @@
 <!-- Please update value in the {}  -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Django-5.x-092E20?logo=django&logoColor=white" />
+  <img src="https://img.shields.io/badge/Django_REST_Framework-API-red?logo=django&logoColor=white" />
+  <img src="https://img.shields.io/badge/Auth-Token_Authentication-blue" />
+  <img src="https://img.shields.io/badge/Role-Based_Access-Control-important" />
+  <img src="https://img.shields.io/badge/Postman-Tested-orange?logo=postman&logoColor=white" />
+</p>
 
-<h1 align="center">Project_Django_Rest_Framework_Rent_A_Car_App</h1>
+<h1 align="center">🚗 Rent a Car REST API</h1>
 
-<p align="center"><strong>🚗 A car rental API application that allows customers to rent vehicles and managers to manage vehicle inventory 🚗</strong></p>
+<p align="center">
+A role-based Rent a Car REST API built with Django REST Framework, featuring reservations, availability rules and authentication.
+</p>
+
 
 <!-- <p align="center"><strong>🚗 Müşterilerin araç kiralamasını ve yöneticilerin araç envanterini yönetmesini sağlayan bir API uygulaması 🚗</strong></p> -->
 
@@ -22,9 +32,8 @@
 
 <!-- TABLE OF CONTENTS -->
 
-## Table of Contents
+## Navigation
 
-- [Table of Contents](#table-of-contents)
 - [API Endpoints](#api-endpoints)
   - [User/Authentication Endpoints:](#userauthentication-endpoints)
   - [API/CAR Endpoints:](#apicar-endpoints)
@@ -42,26 +51,27 @@
 
 ## API Endpoints
 
-This API provides the following endpoints:
+ All endpoints are protected with authentication where required.
+
 
 ### User/Authentication Endpoints:
 
-| Method | URL                                                          | Explanation           |
-|--------|--------------------------------------------------------------|-----------------------|
-| POST   | `https://umit8104.pythonanywhere.com/users/register/`        | New user registration |
-| POST   | `https://umit8104.pythonanywhere.com/users/auth/login/`      | User login            |
-| POST   | `https://umit8104.pythonanywhere.com/users/auth/logout/`     | User logout           |
+| Method | URL                       | Explanation           |
+|--------|---------------------------|-----------------------|
+| POST   | `/users/register/`        | New user registration |
+| POST   | `/users/auth/login/`      | User login            |
+| POST   | `/users/auth/logout/`     | User logout           |
 
 
 ### API/CAR Endpoints:
 
-| Method | URL                                                     | Explanation              |
-|--------|---------------------------------------------------------|--------------------------|
-| GET    | `https://umit8104.pythonanywhere.com/api/car/`          | All vehicles list        |
-| POST   | `https://umit8104.pythonanywhere.com/api/reservation/`  | Create new reservation   |
-| GET    | `https://umit8104.pythonanywhere.com/api/reservation/1` | Specific booking details |
-| PUT    | `https://umit8104.pythonanywhere.com/api/reservation/1` | Update reservation       |
-| DELETE | `https://umit8104.pythonanywhere.com/api/reservation/1` | Delete reservation       |
+| Method | URL                  | Explanation              |
+|--------|----------------------|--------------------------|
+| GET    | `/api/car/`          | All vehicles list        |
+| POST   | `/api/reservation/`  | Create new reservation   |
+| GET    | `/api/reservation/1` | Specific booking details |
+| PUT    | `/api/reservation/1` | Update reservation       |
+| DELETE | `/api/reservation/1` | Delete reservation       |
 
 
 ## API Testing
@@ -89,16 +99,6 @@ Rent A Car API application is a system that aims to facilitate car rental proces
   - The tool can perform CRUD operations for customer and reservation tables.
 - Past dates are not listed and reserved vehicles cannot be booked again.
 
---- 
-
-Rent A Car API uygulaması, araç kiralama süreçlerini kolaylaştırmayı hedefleyen bir sistemdir. Uygulamanın özellikleri:
-- Müşteriler:
-  - Belirli tarih aralıklarında uygun araçları listeleyebilir ve rezerve edebilir.
-  - Rezervasyonlarını görüntüleyebilir veya iptal edebilir.
-  - Aynı tarih aralığında birden fazla araç kiralayamaz.
-- Yöneticiler:
-  - Araç, müşteri ve rezervasyon tabloları için CRUD işlemleri yapabilir.
-- Geçmiş tarihler listelenmez ve rezerve edilen araçlar tekrar rezerve edilemez.
 
 ### User Authentication Test
 <!-- ![screenshot](project_screenshot/Rent_A_Car_User_Auth_Test_Postman.gif) -->
@@ -114,7 +114,6 @@ Rent A Car API uygulaması, araç kiralama süreçlerini kolaylaştırmayı hede
 
 ➡ Testing CRUD operations on the Rent_A_Car_App API with Postman.
 
----
 
 ## Built With
 
@@ -135,11 +134,6 @@ When installing the required packages in the requirements.txt file, review the p
 
 Complete the installation by uncommenting the appropriate package.
 
----
-
-requirements.txt dosyasındaki gerekli paketlerin kurulumu esnasında windows/macOS/Linux ortamları için paket farklılıklarını inceleyin. 
-
-Uygun olan paketi yorumdan kurtararak kurulumu gerçekleştirin. 
 
 ```bash
 # Clone this repository
@@ -216,19 +210,6 @@ SECRET_KEY =123456789abcdefg...
   - Customer (User) table CRUD operations
   - Reservation table CRUD operations
 
----
-
-- Araç kiralama süreçlerini dijitalleştirmek ve optimize etmek amacıyla geliştirilmiş bir API uygulamasıdır. Hem müşterilere hem de yöneticilere özel yetenekler sunar:
-- Müşteriler:
-  - Tarih aralığı belirtip müsait araç listeleyebilir. Geçmiş tarihler listelenmez.
-  - Seçilen tarih aralığında araç rezerve edilebilir, ancak aynı tarih aralığında ikinci bir araç kiralayamaz.
-  - Rezerve edilmiş bir aracı, o tarihlerde rezerve edemez.
-  - Rezervasyonlarını listeyebilir.
-  - Rezervasyonlarını silebilir.
-- Yöneticiler:
-  - Araba tablosu CRUD işlemleri
-  - Müşteri (Kullanıcı) tablosu CRUD işlemleri
-  - Reservasyon tablosu CRUD işlemleri
 
 ## Key Features
 
@@ -238,15 +219,6 @@ SECRET_KEY =123456789abcdefg...
 - 🛠️ **Admin CRUD Operations:** Managers can perform CRUD (Create, Read, Update, Delete) operations on vehicles, customers, and reservations.
 - 📅 **Future Reservations Only:** The app prevents reservations for past dates and avoids re-booking reserved vehicles.
 - 🛡️ **User Authentication:** Users must register and authenticate to access vehicle rental features and manage their reservations.
-
----
-
-- 🚗 **Araç Rezervasyonu:** Müşteriler müsait araçları görüntüleyebilir ve belirlenen tarih aralıklarında rezervasyon yapabilirler.
-- 🚫 **Çakışan Rezervasyon Yok:** Müşteriler aynı zaman diliminde birden fazla araç rezerve edemez.
-- 🔄 **Rezervasyon Yönetimi:** Müşteriler rezervasyonlarını görüntüleyebilir, iptal edebilir ve yönetebilir.
-- 🛠️ **Yönetici CRUD İşlemleri:** Yöneticiler araçlar, müşteriler ve rezervasyonlar üzerinde CRUD (Oluşturma, Okuma, Güncelleme, Silme) işlemlerini gerçekleştirebilir.
-- 📅 **Yalnızca Gelecekteki Rezervasyonlar:** Uygulama, geçmiş tarihler için rezervasyonları önler ve ayrılmış araçların yeniden rezervasyonunu önler.
-- 🛡️ **Kullanıcı Kimlik Doğrulaması:** Araç kiralama özelliklerine erişmek ve rezervasyonlarını yönetmek için kullanıcıların kaydolması ve kimlik doğrulaması yapması gerekir.
 
 
 ## Contact
