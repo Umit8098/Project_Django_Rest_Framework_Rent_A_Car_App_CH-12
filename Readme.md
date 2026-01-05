@@ -18,11 +18,11 @@ A role-based Rent a Car REST API built with Django REST Framework, featuring res
 <div align="center">
   <h3>
     <a href="http://umit8104.pythonanywhere.com/">
-      Live Demo
+      🖥️ Live Demo
     </a>
      | 
     <a href="https://github.com/Umit8098/Project_Django_Rest_Framework_Rent_A_Car_App_CH-12.git">
-      Project
+      📂 Project
     </a>
  
   </h3>
